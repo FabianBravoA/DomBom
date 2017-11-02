@@ -4,7 +4,10 @@ window.onload = function() {
         var text = input.value;
         //Javascript es maldito y no quizo == o ===
         if (isNaN(parseInt(text))) {
-            console.log("No es un número");
+            var pAlert = document.createElement("p");
+            pAlert.innerText = "No es un número";
+            var inputDiv = document.getElementById("inputDiv");
+            inputDiv.appendChild(pAlert);
         } else {
             console.log("Es un número");
         }
